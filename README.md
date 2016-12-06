@@ -11,6 +11,18 @@ Summary: Probabilistic Programming in Python.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pymc3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pymc3-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/pymc3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pymc3-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pymc3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pymc3-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/version.svg)](https://anaconda.org/conda-forge/pymc3)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/downloads.svg)](https://anaconda.org/conda-forge/pymc3)
+
 Installing pymc3
 ================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `pymc3` available on your platform
 ```
 conda search pymc3 --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pymc3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pymc3-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pymc3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pymc3-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pymc3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pymc3-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/version.svg)](https://anaconda.org/conda-forge/pymc3)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/downloads.svg)](https://anaconda.org/conda-forge/pymc3)
 
 
 Updating pymc3-feedstock
