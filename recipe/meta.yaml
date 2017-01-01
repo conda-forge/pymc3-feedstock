@@ -1,5 +1,5 @@
 {% set name = "pymc3" %}
-{% set version = "3.0rc2" %}
+{% set version = "3.0rc5" %}
 {% set md5 = "80105941758b9eba47c8a2774d5ee905" %}
 
 package:
@@ -65,3 +65,4 @@ about:
 extra:
   recipe-maintainers:
     - ericmjl
+    - springcoil
