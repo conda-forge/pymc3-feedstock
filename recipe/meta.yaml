@@ -1,6 +1,6 @@
 {% set name = "pymc3" %}
-{% set version = "3.0rc4" %}
-{% set md5 = "7626aefa9b25a64783882f065b15fc33" %}
+{% set version = "3.0rc6" %}
+{% set md5 = "fc3bb36fbbf787053cf99147164b7439" %}
 
 package:
   name: {{ name | lower }}
@@ -13,6 +13,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py>35]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:

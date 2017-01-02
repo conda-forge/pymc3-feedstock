@@ -38,7 +38,6 @@ environment:
       CONDA_PY: 35
       CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
 
-
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
 platform:
