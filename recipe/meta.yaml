@@ -1,6 +1,6 @@
 {% set name = "pymc3" %}
-{% set version = "3.1rc1" %}
-{% set md5 = "7c2fc8ecea7192b51dc2fe0f582fd39b" %}
+{% set version = "3.1rc2" %}
+{% set md5 = "dc887cdc9989a0f85b1cd1c72a66d423" %}
 
 package:
   name: {{ name | lower }}
@@ -9,7 +9,6 @@ package:
 source:
   fn:  {{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  # url: https://github.com/pymc-devs/{{ name }}/archive/v{{ version }}.tar.gz
   md5: {{ md5 }}
 
 build:
