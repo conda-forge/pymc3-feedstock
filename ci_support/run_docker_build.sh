@@ -55,7 +55,6 @@ source run_conda_forge_build_setup
     set +x
     conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root conda-forge --channel=rc || exit 1
-
 touch /feedstock_root/build_artefacts/conda-forge-build-done
 EOF
 
