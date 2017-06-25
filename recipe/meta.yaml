@@ -1,6 +1,6 @@
 {% set name = "pymc3" %}
-{% set version = "3.0" %}
-{% set md5 = "fe27a0e72848918500f7d47758184ee9" %}
+{% set version = "3.1" %}
+{% set md5 = "bf7d94f3081fa56db79604f66e578a93" %}
 
 package:
   name: {{ name | lower }}
@@ -26,11 +26,14 @@ requirements:
     - numpy >=1.11.0
     - scipy >=0.12.0
     - matplotlib >=1.5.0
-    - theano >=0.8.2
+    - theano >=0.9
     - pandas >=0.18.0
     - patsy >=0.4.0
     - joblib >=0.9
+    - six>=1.10.0
     - tqdm >=4.8.4
+    - h5py>=2.7.0
+    - enum34>=1.1.6
 
 test:
   imports:
@@ -39,13 +42,14 @@ test:
     - pymc3.distributions
     - pymc3.examples
     - pymc3.glm
+    - pymc3.gp
     - pymc3.step_methods
     - pymc3.tests
     - pymc3.tuning
     - pymc3.variational
 
   requires:
-    - nose
+    - pytest
 
 about:
   home: http://github.com/pymc-devs/pymc3
