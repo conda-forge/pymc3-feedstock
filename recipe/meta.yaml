@@ -1,6 +1,6 @@
 {% set name = "pymc3" %}
-{% set version = "3.1" %}
-{% set md5 = "bf7d94f3081fa56db79604f66e578a93" %}
+{% set version = "3.2rc1" %}
+{% set md5 = "a04d049c01ee743f45261fbd27d1474e" %}
 
 package:
   name: {{ name | lower }}
@@ -52,7 +52,7 @@ test:
 
 about:
   home: http://github.com/pymc-devs/pymc3
-  license: AFL-3.0
+  license: Apache-2.0
   summary: 'Probabilistic Programming in Python.'
   license_family: Apache
 
