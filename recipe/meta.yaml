@@ -1,6 +1,6 @@
 {% set name = "pymc3" %}
-{% set version = "3.2rc1" %}
-{% set md5 = "a04d049c01ee743f45261fbd27d1474e" %}
+{% set version = "3.2" %}
+{% set md5 = "5db9b2e662c3ff399e5304c40142e3e4" %}
 
 package:
   name: {{ name | lower }}
