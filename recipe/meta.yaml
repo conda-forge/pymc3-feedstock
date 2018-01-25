@@ -1,15 +1,13 @@
 {% set name = "pymc3" %}
-{% set version = "3.3rc2" %}
-{% set md5 = "8e1d482b38c0d85f5212f01fb783ed8e" %}
+{% set version = "3.3" %}
 
 package:
-  name: {{ name | lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn:  {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ md5 }}
+  url: https://github.com/pymc-devs/{{name}}/archive/v{{version}}.tar.gz
+  sha256: 1af9ecf29b5c2a916e55f75ec96c3dede575de6052efd618af44d306c5928402
 
 build:
   number: 0
