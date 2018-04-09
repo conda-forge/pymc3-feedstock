@@ -1,5 +1,4 @@
 {% set name = "pymc3" %}
-
 {% set version = "3.4rc1" %}
 {% set md5 = "4ba5cb8eb9acfdd7063c35f78bd7a45c" %}
 
