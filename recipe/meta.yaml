@@ -1,24 +1,21 @@
-{% set name = "pymc3" %}
 {% set version = "3.4.rc2" %}
-{% set sha256 = "9b80200ed65c99bd37534e836c23b15c2c8ac8da4f5da39bb99e70ecec7d3214" %}
 
 package:
-  name: {{ name }}
+  name: pymc3
   version: {{ version }}
 
 source:
-  url: https://github.com/pymc-devs/{{name}}/archive/v{{version}}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/pymc-devs/pymc3/archive/v{{ version }}.tar.gz
+  sha256: 7bc1535418296ae0a4a186b5ce2d2a364087fe357fb9ed3ebd20609596c536f2
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - numpy >=1.11.0
