@@ -1,4 +1,4 @@
-{% set version = "3.4.rc2" %}
+{% set version = "3.4.1" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pymc-devs/pymc3/archive/v{{ version }}.tar.gz
-  sha256: 7bc1535418296ae0a4a186b5ce2d2a364087fe357fb9ed3ebd20609596c536f2
+  sha256: 684fa39415e1b4d63216acacb8ca099c70d27dc05d264f20eeb586dca7916ee1
 
 build:
   number: 0
