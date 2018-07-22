@@ -14,14 +14,16 @@ Summary: Probabilistic Programming in Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pymc3-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pymc3-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pymc3-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pymc3-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pymc3-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pymc3-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pymc3-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pymc3-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pymc3-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pymc3-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pymc3-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pymc3-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/version.svg)](https://anaconda.org/conda-forge/pymc3)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pymc3/badges/downloads.svg)](https://anaconda.org/conda-forge/pymc3)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pymc3-green.svg)](https://anaconda.org/conda-forge/pymc3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pymc3.svg)](https://anaconda.org/conda-forge/pymc3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pymc3.svg)](https://anaconda.org/conda-forge/pymc3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pymc3.svg)](https://anaconda.org/conda-forge/pymc3) |
 
 Installing pymc3
 ================
