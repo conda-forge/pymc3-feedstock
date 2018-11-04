@@ -10,15 +10,15 @@ source:
 
 build:
   number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
     - python
-    - numpy >=1.11.0
+    - numpy
     - scipy >=0.12.0
     - matplotlib >=1.5.0
     - theano >=0.9
