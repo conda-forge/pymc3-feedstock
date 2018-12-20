@@ -1,4 +1,4 @@
-{% set version = "3.5" %}
+{% set version = "3.6" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: 6088e683c6d730bb21350a0f54ee083fa5a28e4d5ef52d57878141c9c20f21ee
+  sha256: c00c0778d2451a348a9508f8b956fe280a0f9affd3f85140ac3948bc2902f5e9
 
 build:
   number: 1000
@@ -21,10 +21,10 @@ requirements:
     - numpy
     - scipy >=0.12.0
     - matplotlib >=1.5.0
-    - theano >=0.9
+    - theano >=1.0.0
     - pandas >=0.18.0
     - patsy >=0.4.0
-    - joblib >=0.9
+    - joblib <0.13.0
     - six >=1.10.0
     - tqdm >=4.8.4
     - h5py >=2.7.0
@@ -56,3 +56,4 @@ extra:
   recipe-maintainers:
     - ericmjl
     - springcoil
+    - twiecki
