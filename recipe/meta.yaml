@@ -10,7 +10,8 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  skip: True  # [py2k]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -28,7 +29,6 @@ requirements:
     - six >=1.10.0
     - tqdm >=4.8.4
     - h5py >=2.7.0
-    - enum34 >=1.1.6  # [py<34]
 
 test:
   imports:
@@ -49,7 +49,7 @@ test:
 about:
   home: http://github.com/pymc-devs/pymc3
   license: Apache-2.0
-  summary: 'Probabilistic Programming in Python.'
+  summary: 'Probabilistic Programming in Python'
   license_family: Apache
 
 extra:
