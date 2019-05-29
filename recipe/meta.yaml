@@ -10,15 +10,15 @@ source:
 
 build:
   number: 0
-  skip: True  # [py2k]
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
