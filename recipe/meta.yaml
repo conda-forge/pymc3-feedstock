@@ -22,6 +22,7 @@ requirements:
     - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
+    - arviz >= 0.4.1
     - pandas >=0.18.0
     - patsy >=0.4.0
     - tqdm >=4.8.4
@@ -39,6 +40,7 @@ test:
     - pymc3.tests
     - pymc3.tuning
     - pymc3.variational
+    - pymc3.ode
 
   requires:
     - pytest
