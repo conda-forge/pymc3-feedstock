@@ -23,11 +23,11 @@ requirements:
     - numpy >=1.13.0
     - scipy >=0.18.1
     - arviz >=0.8.3
-    - fastprogress>=0.2.0
+    - fastprogress >=0.2.0
     - pandas >=0.18.0
     - patsy >=0.5.1
     - tqdm >=4.8.4
-    - typing-extensions>=3.7.4
+    - typing-extensions >=3.7.4
     - h5py >=2.7.0
 
 test:
