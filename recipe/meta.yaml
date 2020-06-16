@@ -1,4 +1,4 @@
-{% set version = "3.8" %}
+{% set version = "3.9.1" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: 1bb2915e4a29877c681ead13932b0b7d276f7f496e9c3f09ba96b977c99caf00
+  sha256: 2b59707679f9a05494a98544d52f507bc9ce2506ce01acd692075aa89e1023a9
 
 build:
   number: 0
@@ -22,10 +22,12 @@ requirements:
     - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
-    - arviz >=0.4.1
+    - arviz >=0.8.3
+    - fastprogress >=0.2.0
     - pandas >=0.18.0
-    - patsy >=0.4.0
+    - patsy >=0.5.1
     - tqdm >=4.8.4
+    - typing-extensions >=3.7.4
     - h5py >=2.7.0
 
 test:
