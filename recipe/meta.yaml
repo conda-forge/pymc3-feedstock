@@ -1,4 +1,4 @@
-{% set version = "3.9.1" %}
+{% set version = "3.9.2" %}
 
 package:
   name: pymc3
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: 2b59707679f9a05494a98544d52f507bc9ce2506ce01acd692075aa89e1023a9
+  sha256: 918b0a8050643e2a9dd4d276dd163befded33608db4969828f2c32305135d3e0
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -52,7 +52,7 @@ about:
   license: Apache-2.0
   license_file: LICENSE
   license_family: Apache
-  summary: 'Probabilistic Programming in Python'
+  summary: Probabilistic Programming in Python
 
 extra:
   recipe-maintainers:
