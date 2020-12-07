@@ -19,16 +19,15 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - theano >=1.0.4
-    - numpy >=1.13.0
-    - scipy >=0.18.1
-    - arviz >=0.8.3
+    - arviz >=0.9.0
+    - dill
     - fastprogress >=0.2.0
+    - numpy >=1.13.0
     - pandas >=0.18.0
     - patsy >=0.5.1
-    - tqdm >=4.8.4
+    - scipy >=0.18.1
+    - theano-pymc ==1.0.11
     - typing-extensions >=3.7.4
-    - h5py >=2.7.0
 
 test:
   imports:
@@ -43,9 +42,10 @@ test:
     - pymc3.tuning
     - pymc3.variational
     - pymc3.ode
-
+  commands:
+    - pip check
   requires:
-    - pytest
+    - pip
 
 about:
   home: http://github.com/pymc-devs/pymc3
