@@ -1,4 +1,4 @@
-{% set version = "3.9.3" %}
+{% set version = "3.10.0" %}
 
 package:
   name: pymc3
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: abe046f5a5d0e5baee80b7c4bc0a4c218f61b517b62d77be4f89cf4784c27d78
+  sha256: 6a1461a6239758edb78f66d31b3975dce54b6e80f3938717524e5a17803cc32e
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -19,16 +19,15 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - theano >=1.0.4
-    - numpy >=1.13.0
-    - scipy >=0.18.1
-    - arviz >=0.8.3
+    - arviz >=0.9.0
+    - dill
     - fastprogress >=0.2.0
+    - numpy >=1.13.0
     - pandas >=0.18.0
     - patsy >=0.5.1
-    - tqdm >=4.8.4
+    - scipy >=0.18.1
+    - theano-pymc ==1.0.11
     - typing-extensions >=3.7.4
-    - h5py >=2.7.0
 
 test:
   imports:
@@ -43,9 +42,10 @@ test:
     - pymc3.tuning
     - pymc3.variational
     - pymc3.ode
-
+  commands:
+    - pip check
   requires:
-    - pytest
+    - pip
 
 about:
   home: http://github.com/pymc-devs/pymc3

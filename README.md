@@ -5,11 +5,9 @@ Home: http://github.com/pymc-devs/pymc3
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymc3-feedstock/blob/master/LICENSE.txt)
 
 Summary: Probabilistic Programming in Python
-
-
 
 Current build status
 ====================
