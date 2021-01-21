@@ -28,6 +28,7 @@ requirements:
     - scipy >=0.18.1
     - theano-pymc ==1.0.11
     - typing-extensions >=3.7.4
+    - mkl-service
 
 test:
   imports:
