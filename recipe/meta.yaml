@@ -19,14 +19,14 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - arviz >=0.9.0
+    - arviz >=0.11.0
     - dill
     - fastprogress >=0.2.0
-    - numpy >=1.13.0
-    - pandas >=0.18.0
+    - numpy >=1.15.0
+    - pandas >=0.24.0
     - patsy >=0.5.1
-    - scipy >=0.18.1
-    - theano-pymc ==1.0.11
+    - scipy >=1.2.0
+    - theano-pymc ==1.1.0
     - typing-extensions >=3.7.4
     - mkl-service
 
@@ -35,7 +35,6 @@ test:
     - pymc3
     - pymc3.backends
     - pymc3.distributions
-    - pymc3.examples
     - pymc3.glm
     - pymc3.gp
     - pymc3.step_methods
