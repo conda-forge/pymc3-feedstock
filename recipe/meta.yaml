@@ -1,4 +1,4 @@
-{% set version = "3.10.0" %}
+{% set version = "3.11.0" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: 6a1461a6239758edb78f66d31b3975dce54b6e80f3938717524e5a17803cc32e
+  sha256: 8ddac7f4b71bebcb86d33f07f04183600e50018e458a12813862bd8df0abafe9
 
 build:
   number: 0
@@ -19,22 +19,22 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - arviz >=0.9.0
+    - arviz >=0.11.0
     - dill
     - fastprogress >=0.2.0
-    - numpy >=1.13.0
-    - pandas >=0.18.0
+    - numpy >=1.15.0
+    - pandas >=0.24.0
     - patsy >=0.5.1
-    - scipy >=0.18.1
-    - theano-pymc ==1.0.11
+    - scipy >=1.2.0
+    - theano-pymc ==1.1.0
     - typing-extensions >=3.7.4
+    - mkl-service
 
 test:
   imports:
     - pymc3
     - pymc3.backends
     - pymc3.distributions
-    - pymc3.examples
     - pymc3.glm
     - pymc3.gp
     - pymc3.step_methods
