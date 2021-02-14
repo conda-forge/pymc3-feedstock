@@ -1,4 +1,4 @@
-{% set version = "3.11.0" %}
+{% set version = "3.11.1" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: 8ddac7f4b71bebcb86d33f07f04183600e50018e458a12813862bd8df0abafe9
+  sha256: 501d48b9f5d033678de7a5918b9d055a6806adf84fe16a5a9d65eaa2dc71acd8
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - pandas >=0.24.0
     - patsy >=0.5.1
     - scipy >=1.2.0
-    - theano-pymc ==1.1.0
+    - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - mkl-service
 
