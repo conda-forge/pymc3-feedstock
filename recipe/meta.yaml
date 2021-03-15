@@ -20,12 +20,14 @@ requirements:
   run:
     - python >=3.7
     - arviz >=0.11.0
+    - cachetools >=4.2.1
     - dill
     - fastprogress >=0.2.0
     - numpy >=1.15.0
     - pandas >=0.24.0
     - patsy >=0.5.1
     - scipy >=1.2.0
+    - semver
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - mkl-service
