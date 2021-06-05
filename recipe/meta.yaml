@@ -9,16 +9,16 @@ source:
   sha256: 918b0a8050643e2a9dd4d276dd163befded33608db4969828f2c32305135d3e0
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.6.1
     - pip
   run:
-    - python >=3.7
+    - python >=3.6.1
     - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
@@ -29,6 +29,8 @@ requirements:
     - tqdm >=4.8.4
     - h5py >=2.7.0
     - typing-extensions >=3.7.4.3,<4
+    - contextvars
+    - dataclasses
 
 test:
   imports:
@@ -62,3 +64,4 @@ extra:
     - twiecki
     - fonnesbeck
     - michaelosthege
+    - maresb
