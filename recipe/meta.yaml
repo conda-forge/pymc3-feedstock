@@ -1,4 +1,4 @@
-{% set version = "3.11.2" %}
+{% set version = "3.8" %}
 
 package:
   name: pymc3
@@ -6,31 +6,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: d3b93c8923ae8c8107c5adfd22f7c37fa0849a00a9723e0e0a0ca6afb582d6c3
+  sha256: 1bb2915e4a29877c681ead13932b0b7d276f7f496e9c3f09ba96b977c99caf00
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.5
     - pip
   run:
-    - python >=3.7
-    - arviz >=0.11.0
-    - cachetools >=4.2.1
-    - dill
-    - fastprogress >=0.2.0
-    - numpy >=1.15.0
-    - pandas >=0.24.0
-    - patsy >=0.5.1
-    - scipy >=1.2.0
-    - semver
-    - theano-pymc ==1.1.2
-    - typing-extensions >=3.7.4
-    - mkl-service
+    - python >=3.5
+    - theano >=1.0.4
+    - numpy >=1.13.0
+    - scipy >=0.18.1
+    - arviz >=0.4.1,<0.11.2
+    - pandas >=0.18.0
+    - patsy >=0.4.0
+    - tqdm >=4.8.4
+    - h5py >=2.7.0
+    - typing-extensions >=3.7.4.3,<4
 
 test:
   imports:
