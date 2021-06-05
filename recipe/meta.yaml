@@ -15,10 +15,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.6.1
     - pip
   run:
-    - python >=3.6
+    - python >=3.6.1
     - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
@@ -29,6 +29,8 @@ requirements:
     - tqdm >=4.8.4
     - h5py >=2.7.0
     - typing-extensions >=3.7.4.3,<4
+    - contextvars
+    - dataclasses
 
 test:
   imports:
