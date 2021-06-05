@@ -117,6 +117,7 @@ Feedstock Maintainers
 
 * [@ericmjl](https://github.com/ericmjl/)
 * [@fonnesbeck](https://github.com/fonnesbeck/)
+* [@maresb](https://github.com/maresb/)
 * [@michaelosthege](https://github.com/michaelosthege/)
 * [@springcoil](https://github.com/springcoil/)
 * [@twiecki](https://github.com/twiecki/)
