@@ -1,4 +1,4 @@
-{% set version = "3.9.3" %}
+{% set version = "3.9.2" %}
 
 package:
   name: pymc3
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
-  sha256: abe046f5a5d0e5baee80b7c4bc0a4c218f61b517b62d77be4f89cf4784c27d78
+  sha256: 918b0a8050643e2a9dd4d276dd163befded33608db4969828f2c32305135d3e0
 
 build:
   number: 3
@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - theano >=1.0.5
+    - theano >=1.0.4
     - numpy >=1.13.0
     - scipy >=0.18.1
     - arviz >=0.9.0,<0.11.2
