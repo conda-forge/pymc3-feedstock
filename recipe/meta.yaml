@@ -10,14 +10,15 @@ source:
 
 build:
   number: 1
+  skip: true # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python
     - pip
   run:
-    - python >=3.7
+    - python
     - arviz >=0.11.0
     - cachetools >=4.2.1
     - dill
