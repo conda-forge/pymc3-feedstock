@@ -9,7 +9,7 @@ source:
   sha256: d3b93c8923ae8c8107c5adfd22f7c37fa0849a00a9723e0e0a0ca6afb582d6c3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -31,6 +31,7 @@ requirements:
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - mkl-service
+    - {{ compiler('cxx') }}
 
 test:
   imports:
