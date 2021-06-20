@@ -36,6 +36,7 @@ Installing `pymc3` from the `conda-forge` channel can be achieved by adding `con
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `pymc3` can be installed with:
@@ -116,6 +117,7 @@ Feedstock Maintainers
 
 * [@ericmjl](https://github.com/ericmjl/)
 * [@fonnesbeck](https://github.com/fonnesbeck/)
+* [@maresb](https://github.com/maresb/)
 * [@michaelosthege](https://github.com/michaelosthege/)
 * [@springcoil](https://github.com/springcoil/)
 * [@twiecki](https://github.com/twiecki/)
