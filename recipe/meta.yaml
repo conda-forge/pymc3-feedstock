@@ -31,7 +31,7 @@ requirements:
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - mkl-service
-    - {{ compiler('cxx') }}
+    - compilers
 
 test:
   imports:
