@@ -47,7 +47,8 @@ test:
     - pymc3.ode
   commands:
     - pip check
-    - pytest --ignore pymc3/tests/test_sampling_jax.py pymc3/tests 
+    - pytest --ignore pymc3/tests/test_sampling_jax.py -k "not test_model_to_graphviz_for_model_with_data_container and not test_graphviz" pymc3/tests
+
   requires:
     - pip
     - pytest
