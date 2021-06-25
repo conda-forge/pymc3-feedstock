@@ -47,8 +47,12 @@ test:
     - pymc3.ode
   commands:
     - pip check
+    - pytest --ignore pymc3/tests/test_sampling_jax.py pymc3/tests 
   requires:
     - pip
+    - pytest
+  source_files:
+    - pymc3/tests
 
 about:
   home: http://github.com/pymc-devs/pymc3
