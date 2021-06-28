@@ -33,6 +33,7 @@ requirements:
     - mkl-service
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
+    - libpython
 
 test:
   imports:
