@@ -23,8 +23,10 @@ requirements:
     - cachetools >=4.2.1
     - dill
     - fastprogress >=0.2.0
-    - numpy >=1.15.0
-    - pandas >=0.24.0
+    - numpy >=1.15.0  # [py>37]
+    - numpy =1.15  # [py==37 and not linux]
+    - pandas >=0.24.0  # [py>37]
+    - pandas =0.24  # [py==37 and not linux]
     - patsy >=0.5.1
     - scipy >=1.2.0
     - semver
@@ -33,7 +35,9 @@ requirements:
     - mkl-service
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
-    - libpython
+    - libpython  # [win]
+    - numba  # [not linux]
+    - h5py >=2.7  # [not linux]
 
 test:
   imports:
