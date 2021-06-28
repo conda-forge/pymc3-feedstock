@@ -23,8 +23,10 @@ requirements:
     - cachetools >=4.2.1
     - dill
     - fastprogress >=0.2.0
-    - numpy >=1.15.0
-    - pandas >=0.24.0
+    - numpy >=1.15.0  # [py>37]
+    - numpy =1.15  # [py==37 and not linux]
+    - pandas >=0.24.0  # [py>37]
+    - pandas =0.24  # [py==37 and not linux]
     - patsy >=0.5.1
     - scipy >=1.2.0
     - semver
@@ -33,6 +35,9 @@ requirements:
     - mkl-service
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
+    - libpython  # [win]
+    - numba  # [not linux]
+    # - h5py >=2.7  # [not linux]
 
 test:
   imports:
@@ -48,8 +53,14 @@ test:
     - pymc3.ode
   commands:
     - pip check
+    - pytest --ignore pymc3/tests/test_sampling_jax.py -k "not test_model_to_graphviz_for_model_with_data_container and not test_graphviz" pymc3/tests
+
   requires:
     - pip
+    - pytest
+    - scipy <1.7.0  # https://github.com/pymc-devs/pymc3/issues/4810#issuecomment-869487376
+  source_files:
+    - pymc3/tests
 
 about:
   home: http://github.com/pymc-devs/pymc3
