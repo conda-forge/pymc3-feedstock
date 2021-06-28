@@ -37,7 +37,7 @@ requirements:
     - m2w64-toolchain  # [win]
     - libpython  # [win]
     - numba  # [not linux]
-    - h5py >=2.7  # [not linux]
+    # - h5py >=2.7  # [not linux]
 
 test:
   imports:
@@ -58,6 +58,7 @@ test:
   requires:
     - pip
     - pytest
+    - scipy <1.7.0  # https://github.com/pymc-devs/pymc3/issues/4810#issuecomment-869487376
   source_files:
     - pymc3/tests
 
