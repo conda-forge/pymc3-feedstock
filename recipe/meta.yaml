@@ -30,7 +30,6 @@ requirements:
     - semver
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
-    - mkl-service
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
 
