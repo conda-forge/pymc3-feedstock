@@ -9,7 +9,7 @@ source:
   sha256: 3b88d1e6c85f7fb8a9b99d6f136ac860672170370ec4146338fdd160c3b3fd3f
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,7 +30,6 @@ requirements:
     - semver
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
-    - mkl-service
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
     - libpython  # [win]
