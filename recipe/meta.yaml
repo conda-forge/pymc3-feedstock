@@ -30,12 +30,17 @@ requirements:
     - pandas >=0.24.0
     - patsy >=0.5.1
     - scipy >=1.2.0
-    - semver
+    - semver  # We may need to add the pin: >=2.13.0
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - cxx-compiler  # [not win]
     - m2w64-toolchain  # [win]
     - libpython  # [win]
+    # # For numba explanation, see https://github.com/conda-forge/pymc3-feedstock/pull/70#discussion_r688813190
+    # - numba  # [not linux]
+    # - h5py >=2.7  # [win]
+    # - mkl-service  # [win]
+    # - netcdf4  # [win]
 
 test:
   imports:
@@ -51,8 +56,63 @@ test:
     - pymc3.ode
   commands:
     - pip check
+    # - set "CXXFLAGS=-fno-asynchronous-unwind-tables"  # [win]
+    - pytest pymc3/tests/test_pickling.py
+    - pytest -k "not test_spawn_densitydist_mpctxwarning" pymc3/tests/test_parallel_sampling.py
+    - pytest pymc3/tests/test_ode.py
+    - pytest pymc3/tests/test_ndarray_backend.py
+    - pytest pymc3/tests/test_coords.py
+    - pytest -k "not test_model_to_graphviz_for_model_with_data_container" pymc3/tests/test_data_container.py
+    - pytest -k "not test_weibull" pymc3/tests/test_distributions.py
+    - pytest pymc3/tests/test_distributions_random.py
+    - pytest pymc3/tests/test_distributions_timeseries.py
+    - pytest pymc3/tests/test_distribution_defaults.py
+    - pytest pymc3/tests/test_dist_math.py
+    - pytest pymc3/tests/test_examples.py
+    - pytest pymc3/tests/test_glm.py
+    - pytest pymc3/tests/test_gp.py
+    - pytest pymc3/tests/test_hmc.py
+    - pytest pymc3/tests/test_math.py
+    - pytest pymc3/tests/test_minibatches.py
+    - pytest pymc3/tests/test_missing.py
+    - pytest pymc3/tests/test_mixture.py
+    - pytest pymc3/tests/test_model.py
+    - pytest pymc3/tests/test_modelcontext.py
+    - pytest pymc3/tests/test_models_linear.py
+    - pytest pymc3/tests/test_models_utils.py
+    - pytest pymc3/tests/test_model_func.py
+    - pytest -k "not test_graphviz" pymc3/tests/test_model_graph.py
+    - pytest pymc3/tests/test_model_helpers.py
+    - pytest pymc3/tests/test_plots.py
+    - pytest pymc3/tests/test_posdef_sym.py
+    - pytest pymc3/tests/test_posteriors.py
+    - pytest pymc3/tests/test_posterior_predictive.py
+    - pytest pymc3/tests/test_profile.py
+    - pytest pymc3/tests/test_quadpotential.py
+    - pytest pymc3/tests/test_random.py
+    - pytest pymc3/tests/test_sampling.py
+    # - pytest pymc3/tests/test_sampling_jax.py
+    - pytest pymc3/tests/test_shape_handling.py
+    - pytest pymc3/tests/test_shared.py
+    - pytest pymc3/tests/test_smc.py
+    - pytest pymc3/tests/test_special_functions.py
+    - pytest pymc3/tests/test_starting.py
+    - pytest pymc3/tests/test_step.py
+    - pytest pymc3/tests/test_theanof.py
+    - pytest pymc3/tests/test_tracetab.py
+    - pytest pymc3/tests/test_transforms.py
+    - pytest pymc3/tests/test_tuning.py
+    - pytest pymc3/tests/test_types.py
+    - pytest pymc3/tests/test_updates.py
+    - pytest pymc3/tests/test_util.py
+    - pytest pymc3/tests/test_variational_inference.py
+
   requires:
     - pip
+    - pytest
+    # - scipy <1.7.0  # https://github.com/pymc-devs/pymc3/issues/4810#issuecomment-869487376
+  source_files:
+    - pymc3/tests
 
 about:
   home: http://github.com/pymc-devs/pymc3
