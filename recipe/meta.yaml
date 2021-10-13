@@ -57,7 +57,6 @@ test:
   commands:
     - pip check
     # - set "CXXFLAGS=-fno-asynchronous-unwind-tables"  # [win]
-    - pytest pymc3/tests/test_pickling.py
     - pytest -k "not test_spawn_densitydist_mpctxwarning" pymc3/tests/test_parallel_sampling.py
     - pytest pymc3/tests/test_ode.py
     - pytest pymc3/tests/test_ndarray_backend.py
@@ -106,6 +105,7 @@ test:
     - pytest pymc3/tests/test_updates.py
     - pytest pymc3/tests/test_util.py
     - pytest pymc3/tests/test_variational_inference.py
+    - pytest pymc3/tests/test_pickling.py
 
   requires:
     - pip
