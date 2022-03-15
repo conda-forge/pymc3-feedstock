@@ -29,8 +29,8 @@ requirements:
     - numpy >=1.15.0
     - pandas >=0.24.0
     - patsy >=0.5.1
-    - scipy >=1.2.0
-    - semver
+    - scipy >=1.2.0, <1.8.0
+    - semver >=2.13.0
     - theano-pymc ==1.1.2
     - typing-extensions >=3.7.4
     - cxx-compiler  # [not win]
