@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<37]
+  skip: true  # [py>=310]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - dill
     - fastprogress >=0.2.0
     - numpy >=1.15.0,<1.22.2
-    - pandas >=0.24.0
+    - pandas >=0.24.0,<2.1
     - patsy >=0.5.1
     - scipy >=1.7.3,<1.8.0
     - semver >=2.13.0
