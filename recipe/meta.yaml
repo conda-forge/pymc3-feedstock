@@ -22,7 +22,9 @@ requirements:
     - pip
   run:
     - python
-    - arviz >=0.11.0
+    # The !=0.13.0 pin is a workaround for:
+    # <https://github.com/conda-forge/arviz-feedstock/issues/49>
+    - arviz >=0.11.0,!=0.13.0
     - cachetools >=4.2.1
     - deprecat
     - dill
