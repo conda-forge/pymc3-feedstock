@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pymc3/pymc3-{{ version }}.tar.gz
   sha256: 9e930a1cfd2ee558892b4d92af043696c65a622b64098332687fd75c78f10bce
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py>=310]
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
+    - setuptools
     - pip
   run:
     - python
